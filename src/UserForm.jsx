@@ -1,22 +1,26 @@
-export default function UserForm() {
+export default function UserForm({ handleValuesUpdate }) {
 
     return (
         <div id="user-input">
             <div className="input-group">
-                <label>Prop 1</label>
-                <input type="text" />
+                <div>
+                    <label>Initial investment</label>
+                    <input id="initInvest" type="number" onChange={handleValuesUpdate} />
+                </div>
+                <div>
+                    <label>Annual investment</label>
+                    <input id="annualInvest" type="number" onChange={handleValuesUpdate} />
+                </div>
             </div>
             <div className="input-group">
-                <label>Prop 2</label>
-                <input type="text" />
-            </div>
-            <div className="input-group">
-                <label>Prop 3</label>
-                <input type="text" />
-            </div>
-            <div className="input-group">
-                <label>Prop 4</label>
-                <input type="text" />
+                <div>
+                    <label>Expected return</label>
+                    <input id="expectedReturn" type="number" onChange={handleValuesUpdate} />
+                </div>
+                <div>
+                    <label>Duration</label>
+                    <input id="duration" type="number" onChange={handleValuesUpdate} />
+                </div>
             </div>
         </div>
     )
