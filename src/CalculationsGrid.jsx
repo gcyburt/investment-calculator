@@ -18,12 +18,12 @@ export default function CalculationsGrid({ userValues }) {
             <tbody>
                 {results.map((row, index) => {
                     return (
-                        <tr>
-                            <td id={`§{row.year}1`}>{row.year}</td>
-                            <td id={`§{row.year}2`}>{formatter.format(row.valueEndOfYear)}</td>
-                            <td id={`§{row.year}3`}>{formatter.format(row.interest)}</td>
-                            <td id={`§{row.year}4`}>{formatter.format(row.annualInvestment)}</td>
-                            <td id={`§{row.year}5`}>{formatter.format(row.valueEndOfYear)}</td>
+                        <tr key={index}>
+                            <td key={`${row.year}year`}>{row.year}</td>
+                            <td key={`${row.year}value`}>{formatter.format(row.valueEndOfYear)}</td>
+                            <td key={`${row.year}interest`}>{formatter.format(row.interest)}</td>
+                            <td key={`${row.year}total`}>{formatter.format(row.annualInvestment)}</td>
+                            <td key={`${row.year}invested`}>{formatter.format(row.valueEndOfYear)}</td>
                         </tr>
                     )
                 })}

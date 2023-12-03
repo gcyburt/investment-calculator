@@ -21,7 +21,7 @@ function App() {
     <>
       <Header />
       <UserForm handleValuesUpdate={updateUserValues} />
-      <CalculationsGrid userValues={userValues}/>
+      <CalculationsGrid userValues={userValues} />
     </>
   )
 }
